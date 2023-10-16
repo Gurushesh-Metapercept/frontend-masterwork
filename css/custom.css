@@ -17,9 +17,9 @@
   --primary-800: #08393D;
   --primary-900: #072426;
 
-  --secondary-100: #DAE3F6;
-  --secondary-200: #B8CCF2;
-  --secondary-300: #92B4EF;
+  --secondary-0: #DAE3F6;
+  --secondary-100: #B8CCF2;
+  --secondary-200: #92B4EF;
   --secondary-300: #5294E7;
   --secondary-400: #4381CC;
   --secondary-500: #3D76BC;
@@ -40,22 +40,26 @@
 }
 
 /* width */
-#bs-sidebar-nav::-webkit-scrollbar {
+#bs-sidebar-nav::-webkit-scrollbar,
+#myUL::-webkit-scrollbar {
   width: 5px;
 }
 
 /* Track */
-#bs-sidebar-nav::-webkit-scrollbar-track {
+#bs-sidebar-nav::-webkit-scrollbar-track, 
+#myUL::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
  
 /* Handle */
-#bs-sidebar-nav::-webkit-scrollbar-thumb {
+#bs-sidebar-nav::-webkit-scrollbar-thumb,
+#myUL::-webkit-scrollbar-thumb {
   background: #9e9e9e; 
 }
 
 /* Handle on hover */
-#bs-sidebar-nav::-webkit-scrollbar-thumb:hover {
+#bs-sidebar-nav::-webkit-scrollbar-thumb:hover,
+#myUL::-webkit-scrollbar-thumb:hover {
   background: #d3d3d3; 
 }
 
@@ -439,22 +443,6 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   overflow-y: auto;
 }
 
-
-#scrollTagDiv a[relationtag="H2"]{
-  padding-left: 15px !important;
-} 
-
-#scrollTagDiv a.active[relationtag="H2"] {
-  /* padding-left: 23px !important; */
-}
-
-#scrollTagDiv a[relationtag="H3"]{
-  padding-left: 20px !important;
-} 
-
-#scrollTagDiv a.active[relationtag="H3"] {
-  padding-left: 20px !important;
-}
 
 @media (max-width: 991px) {
   .bs-scrollspy {
@@ -1526,7 +1514,7 @@ padding-left: 1.5rem !important;
   border-left-width: 8px;
   border-left-style: solid;
   border-color: var(--primary-300);
-  padding: 16px;
+  padding: 7pt;
   margin: 16px 0px;
   /* border-radius: 4px; */
   background: #DDF3F8 !important;
@@ -1534,7 +1522,6 @@ padding-left: 1.5rem !important;
  .bigNote > .note__title {
   font-weight: 600;
  }
-
  
  .body.conbody img {
   max-width: 100%;
@@ -1543,10 +1530,16 @@ padding-left: 1.5rem !important;
   margin-top: 1rem !important;
  }
  .body li::marker{
-  color: var(--primary-300) !important;
+  color: #1a8089 !important;
+  font-weight: 600;
+
  }
- .body .ul li a, ol li a {
-  text-decoration: none !important;
+ .body .ul li a, .ol li a {
+  /* text-decoration: none !important; */
+  color: var(--secondary-400) !important;
+}
+.body ul li, .body ol li {
+  padding-left: 3pt;
 }
 .body .section.context .ul{
   margin-top: 1rem !important;
@@ -1562,9 +1555,9 @@ padding-left: 1.5rem !important;
 .body .ul.choices{
   margin-top: 1rem;
 }
-.body ul {
+/* .body ul {
   list-style-type: "❖ " !important;
- }
+ } */
 
  .li.choice li p{
   display: inline-block !important;
@@ -1846,7 +1839,8 @@ ol.ol.substeps {
   margin-top: 18px !important;
 }
 .body table {
-  border-color: #00000059 !important;
+  /* border-color: #00000059 !important; */
+  border-color: #E1E2E8 !important;
 }
 .body table thead tr > th {
   background-color: var(--primary-300) !important;
@@ -1937,4 +1931,73 @@ ol.ol.substeps {
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
+}
+
+
+
+/* ----------------------------------------------------- Small cards Landing Page  */
+.small__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem; 
+  margin-top: 2rem;
+}
+
+@media (min-width: 1600px) {
+  .small__card {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.card-wrapper {
+  text-decoration: none !important;
+  font-weight: 600;
+}
+.card-wrapper > .svg-container {
+  display: block;
+}
+
+.svg-container {
+  box-shadow: 0 4px 11px 0 rgba(37,44,97,.15), 0 1px 3px 0 rgba(93,100,148,.2);
+  background: var(--white);
+  padding: 9px;
+  margin-right: 10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+
+
+#scrollTagDiv a[relationtag="H1"]{
+  color: #2e5c94 !important;
+} 
+
+#scrollTagDiv a[relationtag="H2"]{
+  padding-left: 15px !important;
+  color: var(--secondary-300) !important;
+} 
+
+#scrollTagDiv a.active[relationtag="H2"] {
+  /* padding-left: 23px !important; */
+}
+
+
+#scrollTagDiv a[relationtag="H3"]{
+  padding-left: 25px !important;
+  color: #8B6F11 !important;
+} 
+
+.bigNote a, .p a {
+  color: var(--secondary-400) !important;
+}
+
+.li .p {
+  margin-top: 0 !important;
+}
+
+@page {
+  margin-top: 5mm;
+  margin-bottom: 5mm;
 }
