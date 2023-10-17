@@ -521,11 +521,28 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   /* align-items: center; */
 }
 
+.commentForm input[type=checkbox]:checked {
+  background-color: var(--primary-500) !important;
+}
+
+.checkBoxInput {
+  accent-color: var(--primary-500) !important;
+}
+.commentForm .ccCheckBox{
+  color: var(--black) !important;
+  margin-left: 10px;
+}
+
+
+
+
 @media (max-width: 768px) { 
   .commentForm form {
     max-width: 100%;
   }
 }
+
+
 
 /* .commentForm input[type=email] {
   margin-top: 1rem ;
@@ -2001,3 +2018,9 @@ ol.ol.substeps {
   margin-top: 5mm;
   margin-bottom: 5mm;
 }
+
+
+.menuWithOutContent {
+  cursor: pointer !important;
+}
+
