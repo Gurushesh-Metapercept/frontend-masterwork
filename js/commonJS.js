@@ -122,6 +122,11 @@ window.onload = function() {
   document.getElementById('download-btn').addEventListener('click', function() {
     window.scrollTo(0, 0);
 
+    const dwnlAndLoader = document.getElementById("dwnlAndLoader")
+    dwnlAndLoader.querySelector("#download-btn").classList.add("d-none")
+    dwnlAndLoader.querySelector(".spinner-border").classList.remove("d-none")
+
+
     setTimeout(async function() {
       const headerElement = document.querySelector('#mainHeader').cloneNode(true);
       const articleElement = document.querySelector('article').cloneNode(true);
@@ -161,11 +166,20 @@ window.onload = function() {
         await html2pdf().from(combinedElement).set(options).save(pageTitle);
         console.log('PDF generated and saved successfully.');
 
+        dwnlAndLoader.querySelector("#download-btn").classList.remove("d-none")
+        dwnlAndLoader.querySelector(".spinner-border").classList.add("d-none")
+
         alert('PDF downloaded successfully.');
 
 
       } catch (error) {
+
+        dwnlAndLoader.querySelector("#download-btn").classList.remove("d-none")
+        dwnlAndLoader.querySelector(".spinner-border").classList.add("d-none")
+  
         console.error('An error occurred while generating or saving the PDF:', error);
+        alert("Download failed...")
+
       }
     }, 1000);
   });

@@ -2024,3 +2024,7 @@ ol.ol.substeps {
   cursor: pointer !important;
 }
 
+
+#dwnlAndLoader .spinner-border {
+  color: var(--primary-500) !important;
+}

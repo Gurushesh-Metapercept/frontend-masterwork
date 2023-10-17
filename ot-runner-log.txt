@@ -1,4 +1,4 @@
-Oct 17, 2023 7:25:20 AM com.jorsek.ditaot.log.LogListener run
+Oct 17, 2023 10:30:53 AM com.jorsek.ditaot.log.LogListener run
 INFO: Listening for logs...
-Oct 17, 2023 7:26:45 AM com.jorsek.ditaot.log.LogListener run
+Oct 17, 2023 10:32:28 AM com.jorsek.ditaot.log.LogListener run
 INFO: Process finished...
