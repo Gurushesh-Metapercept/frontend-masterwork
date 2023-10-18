@@ -1633,11 +1633,12 @@ padding-left: 1.5rem !important;
   -o-border-radius: 10px;
   min-height: 200px;
   max-height: 200px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
-.bigCard .smallCard:hover {
+
+/* .bigCard .smallCard:hover {
   box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 10px rgba(0,0,0,0.24);
-}
+} */
 
 .rightCard .left + .right {
   margin-left: 1rem;

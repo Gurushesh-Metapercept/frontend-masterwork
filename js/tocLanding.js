@@ -188,48 +188,52 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < cardTitle.length; i++) {
     cardTitle[i].innerText = ulElement[i].innerText;
 
-    smallCards[i].addEventListener("click", () => {
+    // smallCards[i].addEventListener("click", () => {
 
-      const clickUrl = liElements[i].querySelector("li > ul.nested > li > a").href
+    //   const clickUrl = liElements[i].querySelector("li > ul.nested > li > a").href
 
-      window.location.href = clickUrl
-    });
+    //   window.location.href = clickUrl
+    // });
   }
 });
 
 
-document.addEventListener("DOMContentLoaded", () => { 
-  const ulElement = document.querySelector('.map');
-  const small__card = document.querySelector('.small__card');
-  const allLiElements = ulElement.querySelectorAll('li');
 
 
-  const liElements = Array.from(allLiElements).filter((liElement) => {
-    return liElement.parentElement === ulElement;
-  });
+//  Landing Page small cards  --- uncomment if below code if you want to show small cards
+
+// document.addEventListener("DOMContentLoaded", () => { 
+//   const ulElement = document.querySelector('.map');
+//   const small__card = document.querySelector('.small__card');
+//   const allLiElements = ulElement.querySelectorAll('li');
+
+
+//   const liElements = Array.from(allLiElements).filter((liElement) => {
+//     return liElement.parentElement === ulElement;
+//   });
 
  
 
-  liElements.forEach((liElement) => {
-    const divElement = liElement.querySelector('div');
-    const cardText = divElement.querySelectorAll(".iconAndTitle")[0].innerText.trim()
-    const svgIcon = divElement.querySelectorAll(".iconAndTitle > div")[0].innerHTML
+//   liElements.forEach((liElement) => {
+//     const divElement = liElement.querySelector('div');
+//     const cardText = divElement.querySelectorAll(".iconAndTitle")[0].innerText.trim()
+//     const svgIcon = divElement.querySelectorAll(".iconAndTitle > div")[0].innerHTML
     
-    const cardWrapper = document.createElement('a');
-    cardWrapper.className = 'card-wrapper d-flex align-items-center';
-    cardWrapper.href = liElement.querySelector("a")
+//     const cardWrapper = document.createElement('a');
+//     cardWrapper.className = 'card-wrapper d-flex align-items-center';
+//     cardWrapper.href = liElement.querySelector("a")
 
-    const titleSpan = document.createElement('span');
-    titleSpan.innerText = cardText
+//     const titleSpan = document.createElement('span');
+//     titleSpan.innerText = cardText
    
 
-    const svgContainer = document.createElement('div');
-    svgContainer.className = 'svg-container';
-    svgContainer.innerHTML = svgIcon
+//     const svgContainer = document.createElement('div');
+//     svgContainer.className = 'svg-container';
+//     svgContainer.innerHTML = svgIcon
 
-    cardWrapper.appendChild(titleSpan)
-    cardWrapper.insertBefore(svgContainer, cardWrapper.firstChild);
-    small__card.appendChild(cardWrapper)
+//     cardWrapper.appendChild(titleSpan)
+//     cardWrapper.insertBefore(svgContainer, cardWrapper.firstChild);
+//     small__card.appendChild(cardWrapper)
 
-  })
-})
+//   })
+// })
