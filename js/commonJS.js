@@ -139,8 +139,11 @@ window.onload = function() {
 
       const newHeader = document.createElement("div");
       newHeader.classList.add("navbar")
+      logo.querySelector("img").classList.add("dynamicLogoPrint")
+      console.log(logo)
 
       newHeader.appendChild(logo)
+      console.log(logo)
 
       const elementsToIgnore = articleElement.querySelectorAll('.ignore-this');
       elementsToIgnore.forEach(function(element) {

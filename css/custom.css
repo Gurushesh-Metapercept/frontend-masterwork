@@ -2056,6 +2056,9 @@ ol.ol.substeps {
   }
  }
 
+ .dynamicLogoPrint {
+    height: 40px !important;
+ }
 
 .menuButtonRight {
   padding-left: 0 !important;
