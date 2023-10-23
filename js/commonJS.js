@@ -19,17 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
  // ============================================================ Algolia and Search Modal
  
  document.addEventListener("DOMContentLoaded", () => {
+  
+//  ================================================= Change Algolia AppId, ApiKey and index Name with your
+
+  const client = algoliasearch('EJL4RSWRKD', '44ba7951a7a8ab416efcd8163d4bb95b');    // AppID, ApiKey
+  const indexName = "masterworkz"   // Index name
+
+//  =======================================================================================================
+
+
+
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
     const nosearch = document.getElementById('nosearch');
     const headerSearchBox = document.getElementById('headerSearchBox');
-  
-    // const client = algoliasearch('NJBE7JG5VM', 'f71eda8e547067088e9f1baf84816881');
-    // const indexName = "aurigo-engage-algolia"
-
-
-    const client = algoliasearch('EJL4RSWRKD', '44ba7951a7a8ab416efcd8163d4bb95b');
-    const indexName = "masterworkz"
 
     function clearSearchInput() {
       searchInput.value = '';
@@ -243,35 +246,3 @@ document.addEventListener("DOMContentLoaded", () => {
   insertSVGIcons(sidebarIconAndTitle);
 });
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const iconAndTitle = document.querySelectorAll("#myUL > ul.map > li > div.caret > .iconAndTitle");
-  const iconAndTitle2 = document.querySelectorAll("#myUL2 > ul.map > li > div.caret > .iconAndTitle");
-  const sidebarIconAndTitle = document.querySelectorAll("#sidebar_menulist > li.list_style_border > div > div.iconAndTitle");
-
-  const pathArr = [
-    `  
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="#12636A" xmlns="http://www.w3.org/2000/svg">
-      <mask id="mask0_3_2838" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-      <rect width="20" height="20" fill="#12636A"/>
-      </mask>
-      <g mask="url(#mask0_3_2838)">
-      <path d="M3.33329 16.6667C2.87496 16.6667 2.4826 16.5035 2.15621 16.1771C1.82982 15.8507 1.66663 15.4584 1.66663 15V5.00004C1.66663 4.54171 1.82982 4.14935 2.15621 3.82296C2.4826 3.49657 2.87496 3.33337 3.33329 3.33337H7.64579C7.86802 3.33337 8.07982 3.37504 8.28121 3.45837C8.4826 3.54171 8.65968 3.65976 8.81246 3.81254L9.99996 5.00004H16.6666C17.125 5.00004 17.5173 5.16324 17.8437 5.48962C18.1701 5.81601 18.3333 6.20837 18.3333 6.66671V15C18.3333 15.4584 18.1701 15.8507 17.8437 16.1771C17.5173 16.5035 17.125 16.6667 16.6666 16.6667H3.33329ZM3.33329 5.00004V15H16.6666V6.66671H9.31246L7.64579 5.00004H3.33329Z" fill="#12636A"/>
-      </g>
-      </svg>
-    `
-  ];
-
-  function insertSVGIcons(elements) {
-    elements.forEach((li) => {
-      const svgElement = document.createElement("div");
-      const pathIndex = index % pathArr.length;
-      svgElement.innerHTML = pathArr[pathIndex];
-      li.insertBefore(svgElement, li.firstChild);
-    });
-  }
-
-  insertSVGIcons(iconAndTitle);
-  insertSVGIcons(iconAndTitle2);
-  insertSVGIcons(sidebarIconAndTitle);
-});

@@ -18,7 +18,34 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" integrity="sha384-Ay26V7L8bsJTsX9Sxclnvsn+hkdiwRnrjZJXqKmkIDobPgIIWBOVguEcQQLDuhfN" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"><script src="https://cdn.jsdelivr.net/npm/algoliasearch@4"></script></head>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"><script src="https://cdn.jsdelivr.net/npm/algoliasearch@4"></script><script>
+        
+    
+          // LOGO
+          document.addEventListener("DOMContentLoaded", () => {
+           const logos = document.querySelectorAll(".dynamicLogo");
+
+        
+           const imgElement = document.createElement("img");
+          
+           const linkElements = document.head.querySelectorAll('link[rel="stylesheet"]');
+         
+           linkElements.forEach((linkElement) => {
+             const hrefAttribute = linkElement.getAttribute("href");
+         
+             if (hrefAttribute.includes("common-extended.css")) {
+               imgElement.src = "images/LOGO.png";
+
+               // Assuming you want to append the imgElement to each logo element.
+             
+               logos.forEach((logo) => {
+                 logo.appendChild(imgElement.cloneNode(true));
+               });
+             }
+           });
+         });
+        
+      </script></head>
    <body class="tocMain" id="ditamap-5593">
       <div class="modal fade" id="searchBoxModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <div class="modal-dialog modal-dialog modal-dialog-scrollable modal-fullscreen-lg-down">
@@ -34,10 +61,10 @@
             </div>
          </div>
       </div>
-      <div class="imgback"></div>
+      <div class="imgback d-none"></div>
       <div class="bs-container container-fluid bd-gutter halpBgColor hideSidebarInLandingPage">
          <div class="bs-sidebar bs-sidebarTOC d-none d-lg-block">
-            <div class="logo_sidebar d-none d-lg-block sticky-top"><a class="navbar-brand" href="/"><img src="images/Aurigo_logo.svg"></a></div>
+            <div class="logo_sidebar d-none d-lg-block sticky-top"><a class="navbar-brand dynamicLogo" href="/"></a></div>
             <nav id="myUL" class="myUL">
                <ul class="map">
                   <li class="topicref topichead">
@@ -99,11 +126,13 @@
                            <ul class="nested">
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/ChecklistMgmt.html">Checklist Management</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/AccesActivityAtt.html">Accessing Attachments in a Checklist</a></li>
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/Attaching_Files_to_a_Checklist.html">Attaching Files to a Checklist</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/CreatePrjChklst.html">Creating a Project or Contract Checklist</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/CompletePrjChklst.html">Completing a Project or Contract Checklist</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/CreateFormChklst.html">Creating a Form Checklist</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/CompletFormChklst.html">Completing a Checklist of a Form</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/ValidChklistComp.html">Validating Checklist Completion</a></li>
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/Identifying_a_Validation_Workflow.html">Identifying a Validation Workflow</a></li>
                            </ul>
                         </li>
                         <li class="topicref topichead">
@@ -1140,26 +1169,6 @@
                         <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/BidEstInfo.html">Bid Estimate Information</a></li>
                         <li class="topicref topichead">
                            <div class="caret d-flex justify-content-between">
-                              <div class="d-flex align-items-center iconAndTitle">Groups and Alternate Bids</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
-                                 <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
-                           <ul class="nested">
-                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/CnfgGpAlBid.html">Configuring Groups and Alternate Bids</a></li>
-                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/AddAltBids.html">Managing Alternate Bids</a><ul class="nested">
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/add-altbid.html">Adding an Alternate Bid</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/EditAltBid.html">Editing the Details of an Alternate Bid</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/DelAltBid.html">Deleting an Alternate Bid</a></li>
-                                 </ul>
-                              </li>
-                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/Bid-ConfigGrps.html">Configuring Groups</a><ul class="nested">
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/AddGrp.html">Adding a Group</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/EditGrp.html">Editing the Details of a Group</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/DelGrp.html">Deleting a Group</a></li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </li>
-                        <li class="topicref topichead">
-                           <div class="caret d-flex justify-content-between">
                               <div class="d-flex align-items-center iconAndTitle">Working with Estimates</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
                                  <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
                            <ul class="nested">
@@ -1180,6 +1189,26 @@
                         </li>
                         <li class="topicref topichead">
                            <div class="caret d-flex justify-content-between">
+                              <div class="d-flex align-items-center iconAndTitle">Groups and Alternate Bids</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
+                                 <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
+                           <ul class="nested">
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/CnfgGpAlBid.html">Configuring Groups and Alternate Bids</a></li>
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/AddAltBids.html">Managing Alternate Bids</a><ul class="nested">
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/add-altbid.html">Adding an Alternate Bid</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/EditAltBid.html">Editing the Details of an Alternate Bid</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/DelAltBid.html">Deleting an Alternate Bid</a></li>
+                                 </ul>
+                              </li>
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/Bid-ConfigGrps.html">Configuring Groups</a><ul class="nested">
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/AddGrp.html">Adding a Group</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/EditGrp.html">Editing the Details of a Group</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/DelGrp.html">Deleting a Group</a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="topicref topichead">
+                           <div class="caret d-flex justify-content-between">
                               <div class="d-flex align-items-center iconAndTitle">Bid Items</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
                                  <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
                            <ul class="nested">
@@ -1193,7 +1222,7 @@
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/AddBidItms.html">Adding Items to the Bid Item List</a><ul class="nested">
                                     <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/AddBidItm.html">Adding Items Manually</a></li>
                                     <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/AddMulBidItm.html">Adding Multiple Items to the Bid Item List</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/ExclImport.html">Uploading Details of Bid Items in Bulk</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/UpldBidItmBlk.html">Importing Details of Bid Items in Bulk</a></li>
                                  </ul>
                               </li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Editing_Item_Details/BidEdtItmDets.html">Editing Item Details</a><ul class="nested">
@@ -1408,6 +1437,17 @@
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/ChngMgmt.html">Change Management </a></li>
                               <li class="topicref topichead">
                                  <div class="caret d-flex justify-content-between">
+                                    <div class="d-flex align-items-center iconAndTitle">Request for Information</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
+                                 <ul class="nested">
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Information/RFI-Contract.html">Request for Information</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Information/InitiateRFIForm-Contract.html">Initiating an RFI</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Information/Response_for_the_RFI-Contract.html">Responding to an RFI</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Information/RFIWF-Contract.html">Request for Information Workflow</a></li>
+                                 </ul>
+                              </li>
+                              <li class="topicref topichead">
+                                 <div class="caret d-flex justify-content-between">
                                     <div class="d-flex align-items-center iconAndTitle">Request for Proposal</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
                                        <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
                                  <ul class="nested">
@@ -1422,6 +1462,16 @@
                                        </ul>
                                     </li>
                                     <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Proposal/RFPWF.html">Request for Proposal Workflow</a></li>
+                                 </ul>
+                              </li>
+                              <li class="topicref topichead">
+                                 <div class="caret d-flex justify-content-between">
+                                    <div class="d-flex align-items-center iconAndTitle">Potential Change Order</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
+                                 <ul class="nested">
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Potential_Change_Order/PotentialCO.html">Potential Change Order</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Potential_Change_Order/CreatPotentialCO.html">Creating a Potential Change Order</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Potential_Change_Order/PCO_WF.html">Potential Change Order Workflow</a></li>
                                  </ul>
                               </li>
                               <li class="topicref topichead">
@@ -2034,7 +2084,7 @@
          <div class="h-100">
             <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" id="mainHeaderTOC">
                <div class="container-fluid cover__header px-3">
-                  <div class="bd-navbar-toggle hide-print ignore-this"><button class="navbar-toggler p-2" type="button" aria-label="Toggle docs navigation" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-list"></i></button></div><a class="navbar-brand dynamicLogo d-block d-lg-none" href="/"><img src="images/Aurigo_logo.svg"></a><button class="navbar-toggler border-0 hide-print no-print ignore-this" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-three-dots"></i></button><div class="collapse navbar-collapse hide-print ignore-this no-print" id="navbarSupportedContent">
+                  <div class="bd-navbar-toggle hide-print ignore-this"><button class="navbar-toggler p-2" type="button" aria-label="Toggle docs navigation" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-list"></i></button></div><a class="navbar-brand dynamicLogo d-block d-lg-none" href="/"></a><button class="navbar-toggler border-0 hide-print no-print ignore-this menuButtonRight" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-three-dots"></i></button><div class="collapse navbar-collapse hide-print ignore-this no-print" id="navbarSupportedContent">
                      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                      <div class="printBtn me-lg-3 mb-3 mb-lg-0 no-print"><a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 20 20" fill="none">
                               <mask id="mask0_3_2825" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -2055,8 +2105,8 @@
             <div class="bs-main bs-mainWithoutFR" id="tocContent" style="min-height:calc(100vh - 112px);">
                <article role="article">
                   <div class="coverImage"></div>
-                  <div class="landingPageCards">
-                     <div class="bigCard d-flex flex-column flex-lg-row">
+                  <div class="landingPageCards d-none">
+                     <div class="bigCard d-flex flex-column-reverse flex-lg-row">
                         <div class="leftCard h-100 me-0 me-md-4">
                            <div class="content_wrapper">
                               <h1 id="tocPageHeading"></h1>
@@ -2078,8 +2128,8 @@
                            </div>
                            <div class="small__card"></div>
                         </div>
-                        <div class="rightCard mx-auto d-none d-lg-block" id="leftSmallCard">
-                           <div class="rightCardContent__wrapper d-flex pt-5">
+                        <div class="rightCard mx-auto" id="leftSmallCard">
+                           <div class="rightCardContent__wrapper d-flex pb-5">
                               <div class="left">
                                  <div class="smallCard d-flex flex-column justify-content-center align-items-center">
                                     <div class="cardIcon"><svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
@@ -2192,11 +2242,13 @@
                            <ul class="nested">
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/ChecklistMgmt.html">Checklist Management</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/AccesActivityAtt.html">Accessing Attachments in a Checklist</a></li>
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/Attaching_Files_to_a_Checklist.html">Attaching Files to a Checklist</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/CreatePrjChklst.html">Creating a Project or Contract Checklist</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/CompletePrjChklst.html">Completing a Project or Contract Checklist</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/CreateFormChklst.html">Creating a Form Checklist</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/CompletFormChklst.html">Completing a Checklist of a Form</a></li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/ValidChklistComp.html">Validating Checklist Completion</a></li>
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Common_Application_Features/Checklists/Identifying_a_Validation_Workflow.html">Identifying a Validation Workflow</a></li>
                            </ul>
                         </li>
                         <li class="topicref topichead">
@@ -3233,26 +3285,6 @@
                         <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/BidEstInfo.html">Bid Estimate Information</a></li>
                         <li class="topicref topichead">
                            <div class="caret d-flex justify-content-between">
-                              <div class="d-flex align-items-center iconAndTitle">Groups and Alternate Bids</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
-                                 <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
-                           <ul class="nested">
-                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/CnfgGpAlBid.html">Configuring Groups and Alternate Bids</a></li>
-                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/AddAltBids.html">Managing Alternate Bids</a><ul class="nested">
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/add-altbid.html">Adding an Alternate Bid</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/EditAltBid.html">Editing the Details of an Alternate Bid</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/DelAltBid.html">Deleting an Alternate Bid</a></li>
-                                 </ul>
-                              </li>
-                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/Bid-ConfigGrps.html">Configuring Groups</a><ul class="nested">
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/AddGrp.html">Adding a Group</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/EditGrp.html">Editing the Details of a Group</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/DelGrp.html">Deleting a Group</a></li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </li>
-                        <li class="topicref topichead">
-                           <div class="caret d-flex justify-content-between">
                               <div class="d-flex align-items-center iconAndTitle">Working with Estimates</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
                                  <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
                            <ul class="nested">
@@ -3273,6 +3305,26 @@
                         </li>
                         <li class="topicref topichead">
                            <div class="caret d-flex justify-content-between">
+                              <div class="d-flex align-items-center iconAndTitle">Groups and Alternate Bids</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
+                                 <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
+                           <ul class="nested">
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/CnfgGpAlBid.html">Configuring Groups and Alternate Bids</a></li>
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/AddAltBids.html">Managing Alternate Bids</a><ul class="nested">
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/add-altbid.html">Adding an Alternate Bid</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/EditAltBid.html">Editing the Details of an Alternate Bid</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Managing_Alternate_Bids/DelAltBid.html">Deleting an Alternate Bid</a></li>
+                                 </ul>
+                              </li>
+                              <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/Bid-ConfigGrps.html">Configuring Groups</a><ul class="nested">
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/AddGrp.html">Adding a Group</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/EditGrp.html">Editing the Details of a Group</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Groups_and_Alternate_Bids/Configuring_Groups/DelGrp.html">Deleting a Group</a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="topicref topichead">
+                           <div class="caret d-flex justify-content-between">
                               <div class="d-flex align-items-center iconAndTitle">Bid Items</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
                                  <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
                            <ul class="nested">
@@ -3286,7 +3338,7 @@
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/AddBidItms.html">Adding Items to the Bid Item List</a><ul class="nested">
                                     <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/AddBidItm.html">Adding Items Manually</a></li>
                                     <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/AddMulBidItm.html">Adding Multiple Items to the Bid Item List</a></li>
-                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/ExclImport.html">Uploading Details of Bid Items in Bulk</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Adding_Items_to_the_Bid_Item_List/UpldBidItmBlk.html">Importing Details of Bid Items in Bulk</a></li>
                                  </ul>
                               </li>
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Bid_Estimate_Management/Bid_Items/Editing_Item_Details/BidEdtItmDets.html">Editing Item Details</a><ul class="nested">
@@ -3501,6 +3553,17 @@
                               <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/ChngMgmt.html">Change Management </a></li>
                               <li class="topicref topichead">
                                  <div class="caret d-flex justify-content-between">
+                                    <div class="d-flex align-items-center iconAndTitle">Request for Information</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
+                                 <ul class="nested">
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Information/RFI-Contract.html">Request for Information</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Information/InitiateRFIForm-Contract.html">Initiating an RFI</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Information/Response_for_the_RFI-Contract.html">Responding to an RFI</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Information/RFIWF-Contract.html">Request for Information Workflow</a></li>
+                                 </ul>
+                              </li>
+                              <li class="topicref topichead">
+                                 <div class="caret d-flex justify-content-between">
                                     <div class="d-flex align-items-center iconAndTitle">Request for Proposal</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
                                        <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
                                  <ul class="nested">
@@ -3515,6 +3578,16 @@
                                        </ul>
                                     </li>
                                     <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Request_for_Proposal/RFPWF.html">Request for Proposal Workflow</a></li>
+                                 </ul>
+                              </li>
+                              <li class="topicref topichead">
+                                 <div class="caret d-flex justify-content-between">
+                                    <div class="d-flex align-items-center iconAndTitle">Potential Change Order</div><svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" width="25" height="25" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z"></path></svg></div>
+                                 <ul class="nested">
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Potential_Change_Order/PotentialCO.html">Potential Change Order</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Potential_Change_Order/CreatPotentialCO.html">Creating a Potential Change Order</a></li>
+                                    <li class="topicref"><a href="masterworks-23.3.0/content/documents/Masterworks/Contract_Management/Change_Management/Potential_Change_Order/PCO_WF.html">Potential Change Order Workflow</a></li>
                                  </ul>
                               </li>
                               <li class="topicref topichead">
@@ -4124,5 +4197,5 @@
                </ul>
             </nav>
          </div>
-      </div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/gh/Gurushesh-Metapercept/cdn_v5@main/commonJS.js"></script><script src="https://cdn.jsdelivr.net/gh/Gurushesh-Metapercept/cdn_v5@main/tocLanding.js"></script></body>
+      </div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/gh/Gurushesh-Metapercept/cdn_client_v2@main/commonJS.js"></script><script src="https://cdn.jsdelivr.net/gh/Gurushesh-Metapercept/cdn_client_v2@main/tocLanding.js"></script></body>
 </html>

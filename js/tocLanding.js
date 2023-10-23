@@ -168,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const ulElement = document.querySelectorAll('.map > .topicref.topichead > div.caret');
+  const ulElementCondtion = document.querySelectorAll('#myUL > .map > .topicref.topichead > div.caret');
   const leftSmallCard = document.getElementById("leftSmallCard");
   const smallCards = leftSmallCard.querySelectorAll(".smallCard");
   const cardTitle = leftSmallCard.querySelectorAll(".smallCard .cardTitle");
@@ -177,6 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainCategoryFistTime = document.querySelector(".mainCategoryFistTime")
   const mainCategoryFistTimeMap = document.querySelector(".mainCategoryFistTime .map")
 
+ 
+  // console.log(liElements[0].querySelector("li > ul.nested > li > a").href)
+
   const mapp = document.querySelector('.map');
   const allLiElements = mapp.querySelectorAll('li');
 
@@ -184,16 +188,23 @@ document.addEventListener("DOMContentLoaded", () => {
     return liElement.parentElement === mapp;
   });
 
-  
-  for (let i = 0; i < cardTitle.length; i++) {
-    cardTitle[i].innerText = ulElement[i].innerText;
+    if(liElements.length < 4){
+      window.location.replace(liElements[0].querySelector("li > ul.nested > li > a").href);
+    }else {
+      const imgback = document.querySelector(".imgback")
+      imgback.classList.remove("d-none")
+      const landingPageCards = document.querySelector(".landingPageCards")
+      landingPageCards.classList.remove("d-none")
+    for (let i = 0; i < cardTitle.length; i++) {
+      cardTitle[i].innerText = ulElement[i].innerText.trim();
 
-    // smallCards[i].addEventListener("click", () => {
+      smallCards[i].addEventListener("click", () => {
 
-    //   const clickUrl = liElements[i].querySelector("li > ul.nested > li > a").href
+        const clickUrl = liElements[i].querySelector("li > ul.nested > li > a").href
 
-    //   window.location.href = clickUrl
-    // });
+        window.location.href = clickUrl
+      });
+    }
   }
 });
 

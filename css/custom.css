@@ -470,10 +470,10 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   }
 }
 
-
+/* 
 .navbar-brand img {
   max-width: 90px;
-}
+} */
 
 
 
@@ -1109,9 +1109,10 @@ ul.nested.tocActive li:last-child {
 .logo_sidebar {
   /* border-bottom: 1px solid #E1E2E8; */
   background-color: inherit !important;
-  padding: 1rem 0;
-  max-height: 57px;
+  padding: 1rem 0 5px 0;
+  height: 72px;
 }
+
 
 
 /* @media (min-width: 1400px) {
@@ -1238,9 +1239,7 @@ padding-left: 1.5rem !important;
   font-size: var(--default-size) !important;
 }
 
-.logo_sidebar .navbar-brand img {
-  max-width: 110px;
-}
+
 
 /* ==================================================== Breadcrumb  End*/
 .sidebarMenuText a {
@@ -1318,8 +1317,12 @@ padding-left: 1.5rem !important;
 
  #mainHeaderTOC {
   background: var(--white) !important;
+ 
  }
 
+ #mainHeader, #mainHeaderTOC {
+  min-height: 72px;
+ }
 
 
 .landingPageCard, .mainCategoryFistTime .card {
@@ -1449,15 +1452,16 @@ padding-left: 1.5rem !important;
 }
 .imgback{
   position: absolute;
-  top:57px;
   /* background-image: linear-gradient(180deg,#f5f5fa50,#f5f5fa50), url(../images/pattern-bg.svg);  */
-  background-image: linear-gradient(180deg,#ffffff50,#ffffff50), url(../images/pattern-bg.svg); 
-  
   height: 352px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: bottom right;
+  top:25px;
+  background-image: linear-gradient(180deg,#ffffff50,#ffffff50), url(../images/pattern-bg.svg); 
 }
+
+
 
 #tocContent{
   background-color: transparent;
@@ -1633,7 +1637,9 @@ padding-left: 1.5rem !important;
   -o-border-radius: 10px;
   min-height: 200px;
   max-height: 200px;
-  /* cursor: pointer; */
+  max-width: 160px;
+  min-width: 160px;
+  cursor: pointer;
 }
 
 /* .bigCard .smallCard:hover {
@@ -1854,7 +1860,7 @@ ol.ol.substeps {
 }
 
 .tocMain .offcanvas-body {
-  margin-top: 18px !important;
+  margin-top: 45px !important;
 }
 .body table {
   /* border-color: #00000059 !important; */
@@ -2028,4 +2034,30 @@ ol.ol.substeps {
 
 #dwnlAndLoader .spinner-border {
   color: var(--primary-500) !important;
+}
+
+.navbar-brand {
+  height: 100% !important;
+  
+}
+.logo_sidebar .navbar-brand img {
+  max-width: 130px;
+  height: 100% !important;
+}
+
+
+
+@media (max-width: 991.98px) { 
+  .navbar .dynamicLogo > img {
+    height: 40px !important;
+  }
+  .offcanvasForMain {
+    margin-top: 5rem !important;
+  }
+ }
+
+
+.menuButtonRight {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
